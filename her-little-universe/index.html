@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Her Little Universe — a dreamy birthday surprise countdown and reveal page."
+    />
+    <title>Her Little Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sky-glow" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section id="countdownSection" class="landing-panel" aria-live="polite">
+        <div class="lotus-shell" aria-hidden="true">
+          <div class="moon"></div>
+          <div class="lotus">
+            <span class="petal petal-one"></span>
+            <span class="petal petal-two"></span>
+            <span class="petal petal-three"></span>
+            <span class="petal petal-four"></span>
+            <span class="center"></span>
+          </div>
+        </div>
+
+        <p class="eyebrow">A little universe is waiting for you...</p>
+        <h1>Her Little Universe</h1>
+
+        <div class="countdown" id="countdown" aria-label="Countdown to birthday reveal">
+          <div class="time-block">
+            <span id="days">00</span>
+            <small>Days</small>
+          </div>
+          <div class="time-block">
+            <span id="hours">00</span>
+            <small>Hours</small>
+          </div>
+          <div class="time-block">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+          </div>
+          <div class="time-block">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+
+        <form id="previewForm" class="preview-form" aria-label="Creator preview access">
+          <label for="previewPassword" class="sr-only">Preview password</label>
+          <div class="input-wrap">
+            <input
+              id="previewPassword"
+              name="previewPassword"
+              type="password"
+              placeholder="Early preview password"
+              autocomplete="off"
+            />
+            <button type="submit">Enter</button>
+          </div>
+          <p id="previewMessage" class="preview-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="revealContent" class="reveal-content hidden" aria-live="polite">
+        <header class="intro reveal-block">
+          <div class="header-mark" aria-hidden="true">✦</div>
+          <p class="eyebrow">For the love of my favorite universe</p>
+          <h2>Happy Birthday, My Love</h2>
+          <div class="lotus-shell small" aria-hidden="true">
+            <div class="moon"></div>
+            <div class="lotus">
+              <span class="petal petal-one"></span>
+              <span class="petal petal-two"></span>
+              <span class="petal petal-three"></span>
+              <span class="petal petal-four"></span>
+              <span class="center"></span>
+            </div>
+          </div>
+        </header>
+
+        <section class="gallery reveal-block">
+          <div class="section-heading">
+            <span class="section-tag">Memories</span>
+            <h3>Little moments, big love</h3>
+          </div>
+          <div class="gallery-grid">
+            <figure class="photo-card">
+              <img src="images/memory1.jpg" alt="Memory 1 placeholder" />
+            </figure>
+            <figure class="photo-card">
+              <img src="images/memory2.jpg" alt="Memory 2 placeholder" />
+            </figure>
+          </div>
+        </section>
+
+        <section class="letter reveal-block">
+          <div class="section-heading">
+            <span class="section-tag">Letter</span>
+            <h3>For you</h3>
+          </div>
+          <div class="letter-card">
+            <p>
+              Dear love, this page is only a small place in the universe I made for you.
+              Every star here is a reminder of how bright you are to me, and every quiet
+              moment with you feels like a gentle constellation I never want to leave.
+            </p>
+            <p>
+              Thank you for being the calm in my chaos, the warmth in my silence, and the
+              beautiful rhythm in my everyday life. May this year bring you more peace,
+              laughter, courage, and the kind of love that feels like home.
+            </p>
+            <p>
+              I hope you feel celebrated, deeply cherished, and endlessly loved — not just on
+              this birthday, but in every small moment that follows.
+            </p>
+            <p class="signature">Always yours,</p>
+          </div>
+        </section>
+
+        <section class="voice reveal-block">
+          <div class="section-heading">
+            <span class="section-tag">Voice message</span>
+            <h3>Listen closely</h3>
+          </div>
+          <audio controls preload="metadata">
+            <source src="audio/birthday-message.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <section class="easter reveal-block">
+          <div class="section-heading">
+            <span class="section-tag">Secret</span>
+            <h3>One tiny hidden wish</h3>
+          </div>
+          <button id="easterEggTrigger" class="secret-star" type="button" aria-label="Reveal secret note">
+            ✦
+          </button>
+          <div id="secretMessage" class="secret-message hidden" aria-live="polite">
+            You are my favorite universe, and I keep choosing you in every lifetime.
+          </div>
+        </section>
+
+        <section class="music reveal-block">
+          <div class="section-heading">
+            <span class="section-tag">Music</span>
+            <h3>For the quiet moments</h3>
+          </div>
+          <div id="youtubePlayer" class="youtube-player" aria-live="polite"></div>
+          <p id="youtubeFallback" class="youtube-fallback hidden">
+            The selected video could not be embedded. Open it on YouTube instead.
+            <a id="youtubeLink" href="#" target="_blank" rel="noreferrer">Open YouTube</a>
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
